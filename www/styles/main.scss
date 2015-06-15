@@ -616,42 +616,13 @@ body {
         line-height: 3;
         text-transform: uppercase;
       }
-      #phone {
-        width: 125px;
-        text-align: right;
-        margin: -2px auto;
-        border: 1px solid red;
-        border-radius: 5px;
-        padding: 4px;
-        position: relative;
-        overflow: hidden;
-        a {
-          color: #000;
-        }
-        &:before {
-          content: '';
-          width: 35px;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: block;
-          background: red;
+     .textPrev{
+       margin-top: 15px;
 
-        }
-        &:after {
-          content: '';
-          width: 30px;
-          height: 100%;
-          position: absolute;
-          top: 1px;
-          left: 0px;
-          display: block;
-          background: url("../img/menuIcons.png") no-repeat;
-          background-size: 388px auto;
-          background-position: -325px 0px;
-        }
-      }
+       p{
+         line-height: 1.5;
+       }
+     }
     }
     .tarzan {
       content: '';
@@ -662,7 +633,6 @@ body {
       width: 148px;
       height: 248px;
       left: 40%;
-
       background: url("../img/man.png") no-repeat;
       background-size: 100% auto;
       @include mobile-landscape {
