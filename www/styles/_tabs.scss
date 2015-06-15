@@ -1,0 +1,145 @@
+
+ul.tabs {
+  height: 25px;
+  line-height: 25px;
+  margin: 0 0 3px;
+  list-style: none;
+  position: relative;
+}
+
+* html ul.tabs {
+  margin-bottom: 0;
+}
+
+.t1, .t2, .t3, .t4 {
+  display: none;
+  background: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -khtml-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  width: 40%;
+  text-align: center;
+  @include tablet {
+    display: block;
+    width: 90px;
+  }
+  @include tablet-landscape {
+    width: 200px;
+  }
+}
+
+.t1, .t2 {
+  display: block;
+
+}
+
+.t1 {
+  @include tablet {
+    width: 180px;
+  }
+  @include tablet-landscape {
+    width: 200px;
+  }
+}
+
+
+.tab-current {
+  background: #fff;
+  border-bottom: none !important;
+  box-shadow: none;
+  position: relative;
+  z-index: 10;
+}
+
+ul.tabs li {
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0 !important;
+  -webkit-border-radius: 5px 5px 0 0;
+  -khtml-border-radius: 5px 5px 0 0;
+  height: 25px;
+  border: 1px solid #ccc;
+
+  background: -moz-linear-gradient(90deg, rgba(229, 229, 229, 1) 7%, rgba(255, 255, 255, 1) 39%);
+  background: -webkit-linear-gradient(90deg, rgba(229, 229, 229, 1) 7%, rgba(255, 255, 255, 1) 39%);
+  background: -o-linear-gradient(90deg, rgba(229, 229, 229, 1) 7%, rgba(255, 255, 255, 1) 39%);
+  background: -ms-linear-gradient(90deg, rgba(229, 229, 229, 1) 7%, rgba(255, 255, 255, 1) 39%);
+  background: linear-gradient(180deg, rgba(229, 229, 229, 1) 7%, rgba(255, 255, 255, 1) 39%); /*linear-gradient(to bottom, #ccc, #fff);*/
+}
+
+ul.tabs li a {
+  display: block;
+  padding: 5px 10px;
+  margin: 0 4px 0px 0;
+  color: #111;
+  font-size: 12pt;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fce7ff;
+  border: 1px solid #ccc;
+  border-bottom: 0px solid #F9F9F9;
+  position: relative;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0 !important;
+  -webkit-border-radius: 5px 5px 0 0;
+  -khtml-border-radius: 5px 5px 0 0;
+}
+
+* html ul.tabs li a {
+  float: left;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0 !important;
+  -webkit-border-radius: 5px 5px 0 0;
+  -khtml-border-radius: 5px 5px 0 0;
+}
+
+* + html ul.tabs li a {
+  float: left;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0 !important;
+  -webkit-border-radius: 5px 5px 0 0;
+  -khtml-border-radius: 5px 5px 0 0;
+}
+
+ul.tabs li.tab-current a {
+  color: #444;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0 !important;
+  -webkit-border-radius: 5px 5px 0 0;
+  -khtml-border-radius: 5px 5px 0 0;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+div.t2,
+div.t3,
+div.t4 {
+  display: none;
+}
+
+div.t1,
+div.t2,
+div.t3,
+div.t4 {
+  float: left;
+  width: 95%;
+  background: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -khtml-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  z-index: 5;
+  position: relative;
+  margin: -2px;
+  text-align: justify;
+}

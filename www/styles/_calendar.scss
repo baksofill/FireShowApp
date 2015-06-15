@@ -1,0 +1,434 @@
+.bic_calendar {
+  background: #fff;
+  border-radius: 5px;
+
+}
+
+.myPrev {
+  content: '';
+  background: url("../img/btnNext.png") no-repeat;
+  background-size: 100% 100%;
+  width: 34px;
+  height: 100%;
+  position: absolute;
+  left: -40px;
+  cursor: pointer;
+  top: 0;
+}
+
+.myNext {
+  content: '';
+  background: url("../img/btnNext.png") no-repeat;
+  transform: scaleX(-1.1);
+  -webkit-transform: scaleX(-1.1);
+  background-size: 100% 100%;
+  width: 34px;
+  height: 100%;
+  position: absolute;
+  right: -40px;
+  top: 0;
+  cursor: pointer;
+}
+
+.bic_calendar a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+
+}
+
+.bic_calendar .table tbody > tr > td {
+  text-align: center;
+  padding: 0px;
+}
+
+.bic_calendar td div {
+  padding: 5px;
+}
+
+.bic_calendar td a {
+
+}
+
+.bic_calendar .header {
+  padding: 10px 0 10px 0;
+}
+
+.bic_calendar .button-month-previous {
+  padding: 5px;
+  float: left;
+}
+
+.bic_calendar .button-month-next {
+  padding: 5px;
+  float: right;
+}
+
+.bic_calendar .button-year-previous {
+  padding: 5px;
+  float: left;
+}
+
+.bic_calendar .button-year-next {
+  padding: 5px;
+  float: right;
+}
+
+.bic_calendar .monthAndYear {
+  text-align: center;
+  font-weight: 500;
+}
+
+.bic_calendar .days-month {
+  font-weight: 500;
+}
+
+.bic_calendar .event {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  @include tablet {
+    width: 120px;
+  }
+}
+
+.bic_calendar .event a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.bic_calendar .table {
+  margin-bottom: 3px;
+}
+
+.bic_calendar .days-month td {
+  background: #f0f0f0;
+}
+
+
+.bic_calendar .popover {
+  color: #000;
+  text-shadow: none;
+  width: 200px;
+}
+
+.bic_calendar .popover-content {
+  font-weight: 300;
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.4;
+  visibility: visible;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.tooltip.in {
+  filter: alpha(opacity=90);
+  opacity: .9;
+}
+
+.tooltip.top {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+
+.tooltip.right {
+  padding: 0 5px;
+  margin-left: 3px;
+}
+
+.tooltip.bottom {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+
+.tooltip.left {
+  padding: 0 5px;
+  margin-left: -3px;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.tooltip.top-left .tooltip-arrow {
+  right: 5px;
+  bottom: 0;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000;
+}
+
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: left;
+  white-space: normal;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.popover.top {
+  margin-top: -10px;
+}
+
+.popover.right {
+  margin-left: 10px;
+}
+
+.popover.bottom {
+  margin-top: 10px;
+}
+
+.popover.left {
+  margin-left: -10px;
+}
+
+.popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+  color: red;
+  font-weight: bold;
+}
+
+.popover-content {
+  padding: 9px 14px;
+}
+
+.popover > .arrow,
+.popover > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.popover > .arrow {
+  border-width: 11px;
+}
+
+.popover > .arrow:after {
+  content: "";
+  border-width: 10px;
+}
+
+.popover.top > .arrow {
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-color: #999;
+  border-top-color: rgba(0, 0, 0, .25);
+  border-bottom-width: 0;
+}
+
+.popover.top > .arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-color: #fff;
+  border-bottom-width: 0;
+}
+
+.popover.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-right-color: #999;
+  border-right-color: rgba(0, 0, 0, .25);
+  border-left-width: 0;
+}
+
+.popover.right > .arrow:after {
+  bottom: -10px;
+  left: 1px;
+  content: " ";
+  border-right-color: #fff;
+  border-left-width: 0;
+}
+
+.popover.bottom > .arrow {
+  top: -11px;
+  left: 50%;
+  padding: 0;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0, 0, 0, .25);
+}
+
+.popover.bottom > .arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+
+.popover.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: rgba(0, 0, 0, .25);
+}
+
+.popover.left > .arrow:after {
+  right: 1px;
+  bottom: -10px;
+  content: " ";
+  border-right-width: 0;
+  border-left-color: #fff;
+}
+
+.inVinn, .outDor, .doubleOutDor, .tripleOutDor, .doubleVinn, .tripleVinn, .vacation {
+  border-radius: 5px;
+  border: 1px solid red;
+  position: relative;
+  //  text-align: right !important;
+
+  a {
+    color: red;
+
+  }
+
+  &:before {
+    @include tablet {
+      content: '';
+      width: 39px;
+      height: 30px;
+      position: absolute;
+      background: url("../img/flame.png") no-repeat;
+      background-size: 100% auto;
+      overflow: hidden;
+      display: block;
+      left: 5px;
+      margin-top: 2px;
+
+    }
+  }
+}
+
+.doubleVinn:before {
+  background-position: 0 -35px;
+}
+
+.tripleVinn:before {
+  background-position: 0 -70px;
+}
+
+.outDor:before {
+  background-position: 0 -105px;
+}
+
+.doubleOutDor:before {
+  background-position: 0 -140px;
+}
+
+.vacation:before {
+  background-position: 0 -175px;
+
+  height: 35px;
+}

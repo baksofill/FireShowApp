@@ -1,0 +1,127 @@
+$landscape: "min-aspect-ratio: 4/3";
+$portrait : "max-aspect-ratio: 4/3";
+
+
+$phone-max-size: 600px !default;
+$tablet-min-size: 1024px !default;
+$tablet-max-size: 1280px !default;
+$kindleHDX7-max-width: 600px !default;
+
+
+@mixin portrait {
+  @media only screen and (#{$portrait}) {
+    @content;
+  }
+}
+@mixin landscape {
+  @media only screen and (#{$landscape}) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media only screen and (min-width: 480px) and (max-width: 640px) and (#{$landscape}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (min-width: $phone-max-size - 1)  and (#{$portrait}),
+  (min-width: $tablet-min-size) and (min-height: $phone-max-size) and (#{$landscape}) {
+    @content;
+  }
+}
+@mixin tablet-portrait {
+  @media only screen and (min-width: $phone-max-size - 1)  and (#{$portrait}) {
+    @content;
+  }
+}
+@mixin  tablet-landscape {
+  @media only screen and (min-width: $tablet-min-size) and (min-height: $phone-max-size) and (#{$landscape}) {
+    @content;
+  }
+}
+@mixin  minitab {
+  @media only screen and (min-width: $phone-max-size - 1px) and (max-width: $phone-max-size+1px)  and (#{$portrait}),
+  (max-width: $tablet-min-size) and (max-height: $phone-max-size) and (#{$landscape}){
+    @content;
+  }
+}
+@mixin  minitab-portrait {
+  @media only screen and (min-width: $phone-max-size - 1px) and (max-width: $phone-max-size+1px)  and (#{$portrait}) {
+    @content;
+  }
+}
+@mixin  minitab-landscape {
+  @media only screen  and (max-width: $tablet-min-size) and (max-height: $phone-max-size) {
+    @content;
+  }
+}
+@mixin desktop-short {
+  @media only screen and (min-width: $tablet-max-size){
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (min-width: $tablet-max-size)and (min-height: 750px) {
+    @content;
+  }
+}
+
+
+
+@mixin display-flex( $justify: space-around, $align: center ){
+  $box-pack: center;
+  $box-align: center;
+
+  @include display-box();
+
+  @include experimental-value(display, flex,
+          -moz, -webkit, not -o, -ms, not -khtml, official
+  );
+  //flex-wrap: $wrap;
+
+  @if $justify == flex-start {
+    $box-pack: start;
+  } @else if $justify == flex-end {
+    $box-pack: end;
+  } @else if $justify == center {
+    $box-pack: $justify;
+  } @else if $justify == space-between or $justify == space-around {
+    $box-pack: center;
+  }
+
+  @include box-pack($box-pack);
+  -webkit-justify-content: $justify;
+  justify-content: $justify;
+
+  @if $align == flex-start or $align == baseline {
+    $box-align: start;
+  } @else if $align == flex-end {
+    $box-align: end;
+  } @else if $align == center {
+    $box-align: $align;
+  } @else if $align == stretch {
+    $box-align: stretch;
+  }
+
+  @include box-align($box-align);
+  -webkit-align-items: $align;
+  align-items: $align;
+}
+@mixin flex($flex: $default-box-flex){
+  @include box-flex($flex);
+
+  @include experimental(flex, $flex,
+          -moz, -webkit, not -o, -ms, not -khtml, official
+  );
+}
+@mixin box-centered ($orient: vertical) {
+  @include display-box;
+  @include box-orient($orient);
+  @include box-align(center);
+  @include box-pack(center);
+}
+
+
+
+
