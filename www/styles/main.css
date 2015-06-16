@@ -1120,20 +1120,19 @@ div.t4 {
   background: #f0f0f0;
 }
 
-/* line 112, _calendar.scss */
+/* line 111, _calendar.scss */
 .bic_calendar .popover {
   color: #000;
   text-shadow: none;
   width: 200px;
 }
 
-/* line 118, _calendar.scss */
+/* line 117, _calendar.scss */
 .bic_calendar .popover-content {
   font-weight: 300;
-  display: none;
 }
 
-/* line 123, _calendar.scss */
+/* line 122, _calendar.scss */
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -1147,37 +1146,37 @@ div.t4 {
   opacity: 0;
 }
 
-/* line 136, _calendar.scss */
+/* line 135, _calendar.scss */
 .tooltip.in {
   filter: alpha(opacity=90);
   opacity: .9;
 }
 
-/* line 141, _calendar.scss */
+/* line 140, _calendar.scss */
 .tooltip.top {
   padding: 5px 0;
   margin-top: -3px;
 }
 
-/* line 146, _calendar.scss */
+/* line 145, _calendar.scss */
 .tooltip.right {
   padding: 0 5px;
   margin-left: 3px;
 }
 
-/* line 151, _calendar.scss */
+/* line 150, _calendar.scss */
 .tooltip.bottom {
   padding: 5px 0;
   margin-top: 3px;
 }
 
-/* line 156, _calendar.scss */
+/* line 155, _calendar.scss */
 .tooltip.left {
   padding: 0 5px;
   margin-left: -3px;
 }
 
-/* line 161, _calendar.scss */
+/* line 160, _calendar.scss */
 .tooltip-inner {
   max-width: 200px;
   padding: 3px 8px;
@@ -1188,7 +1187,7 @@ div.t4 {
   border-radius: 4px;
 }
 
-/* line 171, _calendar.scss */
+/* line 170, _calendar.scss */
 .tooltip-arrow {
   position: absolute;
   width: 0;
@@ -1197,7 +1196,7 @@ div.t4 {
   border-style: solid;
 }
 
-/* line 179, _calendar.scss */
+/* line 178, _calendar.scss */
 .tooltip.top .tooltip-arrow {
   bottom: 0;
   left: 50%;
@@ -1206,7 +1205,7 @@ div.t4 {
   border-top-color: #000;
 }
 
-/* line 187, _calendar.scss */
+/* line 186, _calendar.scss */
 .tooltip.top-left .tooltip-arrow {
   right: 5px;
   bottom: 0;
@@ -1215,7 +1214,7 @@ div.t4 {
   border-top-color: #000;
 }
 
-/* line 195, _calendar.scss */
+/* line 194, _calendar.scss */
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   left: 5px;
@@ -1224,7 +1223,7 @@ div.t4 {
   border-top-color: #000;
 }
 
-/* line 203, _calendar.scss */
+/* line 202, _calendar.scss */
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
@@ -1233,7 +1232,7 @@ div.t4 {
   border-right-color: #000;
 }
 
-/* line 211, _calendar.scss */
+/* line 210, _calendar.scss */
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
@@ -1242,7 +1241,7 @@ div.t4 {
   border-left-color: #000;
 }
 
-/* line 219, _calendar.scss */
+/* line 218, _calendar.scss */
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
@@ -1251,7 +1250,7 @@ div.t4 {
   border-bottom-color: #000;
 }
 
-/* line 227, _calendar.scss */
+/* line 226, _calendar.scss */
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   right: 5px;
@@ -1260,7 +1259,7 @@ div.t4 {
   border-bottom-color: #000;
 }
 
-/* line 235, _calendar.scss */
+/* line 234, _calendar.scss */
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   left: 5px;
@@ -1269,7 +1268,7 @@ div.t4 {
   border-bottom-color: #000;
 }
 
-/* line 243, _calendar.scss */
+/* line 242, _calendar.scss */
 .popover {
   position: absolute;
   top: 0;
@@ -1294,27 +1293,27 @@ div.t4 {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* line 267, _calendar.scss */
+/* line 266, _calendar.scss */
 .popover.top {
   margin-top: -10px;
 }
 
-/* line 271, _calendar.scss */
+/* line 270, _calendar.scss */
 .popover.right {
   margin-left: 10px;
 }
 
-/* line 275, _calendar.scss */
+/* line 274, _calendar.scss */
 .popover.bottom {
   margin-top: 10px;
 }
 
-/* line 279, _calendar.scss */
+/* line 278, _calendar.scss */
 .popover.left {
   margin-left: -10px;
 }
 
-/* line 283, _calendar.scss */
+/* line 282, _calendar.scss */
 .popover-title {
   padding: 8px 14px;
   margin: 0;
@@ -1326,12 +1325,12 @@ div.t4 {
   font-weight: bold;
 }
 
-/* line 294, _calendar.scss */
+/* line 293, _calendar.scss */
 .popover-content {
   padding: 9px 14px;
 }
 
-/* line 299, _calendar.scss */
+/* line 298, _calendar.scss */
 .popover > .arrow,
 .popover > .arrow:after {
   position: absolute;
@@ -1342,18 +1341,18 @@ div.t4 {
   border-style: solid;
 }
 
-/* line 308, _calendar.scss */
+/* line 307, _calendar.scss */
 .popover > .arrow {
   border-width: 11px;
 }
 
-/* line 312, _calendar.scss */
+/* line 311, _calendar.scss */
 .popover > .arrow:after {
   content: "";
   border-width: 10px;
 }
 
-/* line 317, _calendar.scss */
+/* line 316, _calendar.scss */
 .popover.top > .arrow {
   bottom: -11px;
   left: 50%;
@@ -1363,7 +1362,7 @@ div.t4 {
   border-bottom-width: 0;
 }
 
-/* line 326, _calendar.scss */
+/* line 325, _calendar.scss */
 .popover.top > .arrow:after {
   bottom: 1px;
   margin-left: -10px;
@@ -1372,7 +1371,7 @@ div.t4 {
   border-bottom-width: 0;
 }
 
-/* line 334, _calendar.scss */
+/* line 333, _calendar.scss */
 .popover.right > .arrow {
   top: 50%;
   left: -11px;
@@ -1382,7 +1381,7 @@ div.t4 {
   border-left-width: 0;
 }
 
-/* line 343, _calendar.scss */
+/* line 342, _calendar.scss */
 .popover.right > .arrow:after {
   bottom: -10px;
   left: 1px;
@@ -1391,7 +1390,7 @@ div.t4 {
   border-left-width: 0;
 }
 
-/* line 351, _calendar.scss */
+/* line 350, _calendar.scss */
 .popover.bottom > .arrow {
   top: -11px;
   left: 50%;
@@ -1402,7 +1401,7 @@ div.t4 {
   border-bottom-color: rgba(0, 0, 0, 0.25);
 }
 
-/* line 361, _calendar.scss */
+/* line 360, _calendar.scss */
 .popover.bottom > .arrow:after {
   top: 1px;
   margin-left: -10px;
@@ -1411,7 +1410,7 @@ div.t4 {
   border-bottom-color: #fff;
 }
 
-/* line 369, _calendar.scss */
+/* line 368, _calendar.scss */
 .popover.left > .arrow {
   top: 50%;
   right: -11px;
@@ -1421,7 +1420,7 @@ div.t4 {
   border-left-color: rgba(0, 0, 0, 0.25);
 }
 
-/* line 378, _calendar.scss */
+/* line 377, _calendar.scss */
 .popover.left > .arrow:after {
   right: 1px;
   bottom: -10px;
@@ -1430,18 +1429,18 @@ div.t4 {
   border-left-color: #fff;
 }
 
-/* line 386, _calendar.scss */
+/* line 385, _calendar.scss */
 .inVinn, .outDor, .doubleOutDor, .tripleOutDor, .doubleVinn, .tripleVinn, .vacation {
   border-radius: 5px;
   border: 1px solid red;
   position: relative;
 }
-/* line 392, _calendar.scss */
+/* line 391, _calendar.scss */
 .inVinn a, .outDor a, .doubleOutDor a, .tripleOutDor a, .doubleVinn a, .tripleVinn a, .vacation a {
   color: red;
 }
 @media only screen and (min-width: 599px) and (max-aspect-ratio: 4 / 3), (min-width: 1024px) and (min-height: 600px) and (min-aspect-ratio: 4 / 3) {
-  /* line 397, _calendar.scss */
+  /* line 396, _calendar.scss */
   .inVinn:before, .outDor:before, .doubleOutDor:before, .tripleOutDor:before, .doubleVinn:before, .tripleVinn:before, .vacation:before {
     content: '';
     width: 39px;
@@ -1456,27 +1455,27 @@ div.t4 {
   }
 }
 
-/* line 414, _calendar.scss */
+/* line 413, _calendar.scss */
 .doubleVinn:before {
   background-position: 0 -35px;
 }
 
-/* line 418, _calendar.scss */
+/* line 417, _calendar.scss */
 .tripleVinn:before {
   background-position: 0 -70px;
 }
 
-/* line 422, _calendar.scss */
+/* line 421, _calendar.scss */
 .outDor:before {
   background-position: 0 -105px;
 }
 
-/* line 426, _calendar.scss */
+/* line 425, _calendar.scss */
 .doubleOutDor:before {
   background-position: 0 -140px;
 }
 
-/* line 430, _calendar.scss */
+/* line 429, _calendar.scss */
 .vacation:before {
   background-position: 0 -175px;
   height: 35px;
@@ -3968,8 +3967,17 @@ body {
   color: white;
   margin-top: 50%;
 }
+/* line 1524, main.scss */
+.feedback > div .downloadGrafik {
+  height: 90%;
+  width: 90%;
+  overflow: scroll;
+  display: block;
+  position: relative;
+  border: 1px solid red;
+}
 
-/* line 1527, main.scss */
+/* line 1536, main.scss */
 #orderCallModal, #orderFireModal, #sunSatCalc {
   z-index: 50;
   top: 0;
@@ -3979,7 +3987,7 @@ body {
   position: absolute;
   display: none;
 }
-/* line 1535, main.scss */
+/* line 1544, main.scss */
 #orderCallModal .closeBtn, #orderFireModal .closeBtn, #sunSatCalc .closeBtn {
   cursor: pointer;
   width: 30px;
@@ -3993,7 +4001,7 @@ body {
   background-color: #fff;
   color: red;
 }
-/* line 1548, main.scss */
+/* line 1557, main.scss */
 #orderCallModal .modal-backdrop, #orderFireModal .modal-backdrop, #sunSatCalc .modal-backdrop {
   width: 100%;
   height: 100% !important;
@@ -4004,17 +4012,17 @@ body {
   content: '';
   z-index: 50;
 }
-/* line 1558, main.scss */
+/* line 1567, main.scss */
 #orderCallModal .modal-header, #orderFireModal .modal-header, #sunSatCalc .modal-header {
   text-align: right;
 }
-/* line 1561, main.scss */
+/* line 1570, main.scss */
 #orderCallModal h3, #orderFireModal h3, #sunSatCalc h3 {
   color: #000;
   font-size: 130%;
   margin: 15px;
 }
-/* line 1566, main.scss */
+/* line 1575, main.scss */
 #orderCallModal > .modal-body, #orderFireModal > .modal-body, #sunSatCalc > .modal-body {
   z-index: 50;
   position: absolute;
@@ -4029,7 +4037,7 @@ body {
   text-align: center;
 }
 @media only screen and (min-width: 599px) and (max-aspect-ratio: 4 / 3), (min-width: 1024px) and (min-height: 600px) and (min-aspect-ratio: 4 / 3) {
-  /* line 1566, main.scss */
+  /* line 1575, main.scss */
   #orderCallModal > .modal-body, #orderFireModal > .modal-body, #sunSatCalc > .modal-body {
     width: 500px;
     height: 300px;
@@ -4037,7 +4045,7 @@ body {
     margin-top: -150px;
   }
 }
-/* line 1584, main.scss */
+/* line 1593, main.scss */
 #orderCallModal > .modal-body input, #orderCallModal > .modal-body select, #orderCallModal > .modal-body textarea, #orderFireModal > .modal-body input, #orderFireModal > .modal-body select, #orderFireModal > .modal-body textarea, #sunSatCalc > .modal-body input, #sunSatCalc > .modal-body select, #sunSatCalc > .modal-body textarea {
   font-family: HeliosCondThin;
   border: 1px solid #c2c2cc;
@@ -4050,22 +4058,22 @@ body {
   outline: none;
   width: 65%;
 }
-/* line 1595, main.scss */
+/* line 1604, main.scss */
 #orderCallModal > .modal-body input:focus, #orderCallModal > .modal-body select:focus, #orderCallModal > .modal-body textarea:focus, #orderFireModal > .modal-body input:focus, #orderFireModal > .modal-body select:focus, #orderFireModal > .modal-body textarea:focus, #sunSatCalc > .modal-body input:focus, #sunSatCalc > .modal-body select:focus, #sunSatCalc > .modal-body textarea:focus {
   border: 1px solid red;
 }
-/* line 1599, main.scss */
+/* line 1608, main.scss */
 #orderCallModal > .modal-body #anotherDaySun, #orderFireModal > .modal-body #anotherDaySun, #sunSatCalc > .modal-body #anotherDaySun {
   text-align: center;
   width: 50%;
 }
-/* line 1603, main.scss */
+/* line 1612, main.scss */
 #orderCallModal > .modal-body .todaySun, #orderCallModal > .modal-body .anotherSunResult > span, #orderFireModal > .modal-body .todaySun, #orderFireModal > .modal-body .anotherSunResult > span, #sunSatCalc > .modal-body .todaySun, #sunSatCalc > .modal-body .anotherSunResult > span {
   font-weight: bold;
   color: red;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 1609, main.scss */
+/* line 1618, main.scss */
 #orderCallModal > .modal-body button, #orderFireModal > .modal-body button, #sunSatCalc > .modal-body button {
   font-family: HeliosCondThin;
   border-radius: 3px;
@@ -4083,22 +4091,22 @@ body {
   letter-spacing: 1px;
 }
 
-/* line 1629, main.scss */
+/* line 1638, main.scss */
 #orderFireModal > .modal-body {
   height: 600px;
   margin-top: -300px;
 }
-/* line 1633, main.scss */
+/* line 1642, main.scss */
 #orderFireModal > .modal-body #customerProgramFire {
   margin: 10px 0px;
   width: 68%;
 }
-/* line 1637, main.scss */
+/* line 1646, main.scss */
 #orderFireModal > .modal-body #customerNotesFire {
   height: 100px;
 }
 
-/* line 1646, main.scss */
+/* line 1655, main.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -4106,13 +4114,13 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 1652, main.scss */
+/* line 1661, main.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 1656, main.scss */
+/* line 1665, main.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -4120,31 +4128,31 @@ body {
 
 /*the animation definition*/
 @-webkit-keyframes swing {
-  /* line 1662, main.scss */
+  /* line 1671, main.scss */
   20% {
     -webkit-transform: rotate3d(0, 0, 1, 15deg);
     transform: rotate3d(0, 0, 1, 15deg);
   }
 
-  /* line 1666, main.scss */
+  /* line 1675, main.scss */
   40% {
     -webkit-transform: rotate3d(0, 0, 1, -10deg);
     transform: rotate3d(0, 0, 1, -10deg);
   }
 
-  /* line 1670, main.scss */
+  /* line 1679, main.scss */
   60% {
     -webkit-transform: rotate3d(0, 0, 1, 5deg);
     transform: rotate3d(0, 0, 1, 5deg);
   }
 
-  /* line 1674, main.scss */
+  /* line 1683, main.scss */
   80% {
     -webkit-transform: rotate3d(0, 0, 1, -5deg);
     transform: rotate3d(0, 0, 1, -5deg);
   }
 
-  /* line 1678, main.scss */
+  /* line 1687, main.scss */
   100% {
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
     transform: rotate3d(0, 0, 1, 0deg);
@@ -4152,35 +4160,35 @@ body {
 }
 
 @keyframes swing {
-  /* line 1684, main.scss */
+  /* line 1693, main.scss */
   20% {
     -webkit-transform: rotate3d(0, 0, 1, 15deg);
     -ms-transform: rotate3d(0, 0, 1, 15deg);
     transform: rotate3d(0, 0, 1, 15deg);
   }
 
-  /* line 1689, main.scss */
+  /* line 1698, main.scss */
   40% {
     -webkit-transform: rotate3d(0, 0, 1, -10deg);
     -ms-transform: rotate3d(0, 0, 1, -10deg);
     transform: rotate3d(0, 0, 1, -10deg);
   }
 
-  /* line 1694, main.scss */
+  /* line 1703, main.scss */
   60% {
     -webkit-transform: rotate3d(0, 0, 1, 5deg);
     -ms-transform: rotate3d(0, 0, 1, 5deg);
     transform: rotate3d(0, 0, 1, 5deg);
   }
 
-  /* line 1699, main.scss */
+  /* line 1708, main.scss */
   80% {
     -webkit-transform: rotate3d(0, 0, 1, -5deg);
     -ms-transform: rotate3d(0, 0, 1, -5deg);
     transform: rotate3d(0, 0, 1, -5deg);
   }
 
-  /* line 1704, main.scss */
+  /* line 1713, main.scss */
   100% {
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
     -ms-transform: rotate3d(0, 0, 1, 0deg);
@@ -4188,7 +4196,7 @@ body {
   }
 }
 
-/* line 1710, main.scss */
+/* line 1719, main.scss */
 .swing {
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
@@ -4198,20 +4206,20 @@ body {
 }
 
 @-webkit-keyframes tada {
-  /* line 1718, main.scss */
+  /* line 1727, main.scss */
   0% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 
-  /* line 1723, main.scss */
+  /* line 1732, main.scss */
   10%,
   20% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
 
-  /* line 1730, main.scss */
+  /* line 1739, main.scss */
   30%,
   50%,
   70%,
@@ -4220,7 +4228,7 @@ body {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
 
-  /* line 1736, main.scss */
+  /* line 1745, main.scss */
   40%,
   60%,
   80% {
@@ -4228,7 +4236,7 @@ body {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
 
-  /* line 1740, main.scss */
+  /* line 1749, main.scss */
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -4236,14 +4244,14 @@ body {
 }
 
 @keyframes tada {
-  /* line 1746, main.scss */
+  /* line 1755, main.scss */
   0% {
     -webkit-transform: scale3d(1, 1, 1);
     -ms-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 
-  /* line 1752, main.scss */
+  /* line 1761, main.scss */
   10%,
   20% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
@@ -4251,7 +4259,7 @@ body {
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
 
-  /* line 1760, main.scss */
+  /* line 1769, main.scss */
   30%,
   50%,
   70%,
@@ -4261,7 +4269,7 @@ body {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
 
-  /* line 1767, main.scss */
+  /* line 1776, main.scss */
   40%,
   60%,
   80% {
@@ -4270,7 +4278,7 @@ body {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
 
-  /* line 1772, main.scss */
+  /* line 1781, main.scss */
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     -ms-transform: scale3d(1, 1, 1);
@@ -4278,14 +4286,14 @@ body {
   }
 }
 
-/* line 1778, main.scss */
+/* line 1787, main.scss */
 .tada {
   -webkit-animation-name: tada;
   animation-name: tada;
 }
 
 @-webkit-keyframes zoomInDown {
-  /* line 1783, main.scss */
+  /* line 1792, main.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
@@ -4294,7 +4302,7 @@ body {
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
-  /* line 1790, main.scss */
+  /* line 1799, main.scss */
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
@@ -4305,7 +4313,7 @@ body {
 }
 
 @keyframes zoomInDown {
-  /* line 1799, main.scss */
+  /* line 1808, main.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
@@ -4315,7 +4323,7 @@ body {
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
-  /* line 1807, main.scss */
+  /* line 1816, main.scss */
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
@@ -4326,14 +4334,14 @@ body {
   }
 }
 
-/* line 1816, main.scss */
+/* line 1825, main.scss */
 .zoomInDown {
   -webkit-animation-name: zoomInDown;
   animation-name: zoomInDown;
 }
 
 @-webkit-keyframes hinge {
-  /* line 1821, main.scss */
+  /* line 1830, main.scss */
   0% {
     -webkit-transform-origin: top left;
     transform-origin: top left;
@@ -4341,7 +4349,7 @@ body {
     animation-timing-function: ease-in-out;
   }
 
-  /* line 1828, main.scss */
+  /* line 1837, main.scss */
   20%,
   60% {
     -webkit-transform: rotate3d(0, 0, 1, 80deg);
@@ -4352,7 +4360,7 @@ body {
     animation-timing-function: ease-in-out;
   }
 
-  /* line 1837, main.scss */
+  /* line 1846, main.scss */
   40%,
   80% {
     -webkit-transform: rotate3d(0, 0, 1, 60deg);
@@ -4364,7 +4372,7 @@ body {
     opacity: 1;
   }
 
-  /* line 1846, main.scss */
+  /* line 1855, main.scss */
   100% {
     -webkit-transform: translate3d(0, 700px, 0);
     transform: translate3d(0, 700px, 0);
@@ -4373,7 +4381,7 @@ body {
 }
 
 @keyframes hinge {
-  /* line 1853, main.scss */
+  /* line 1862, main.scss */
   0% {
     -webkit-transform-origin: top left;
     -ms-transform-origin: top left;
@@ -4382,7 +4390,7 @@ body {
     animation-timing-function: ease-in-out;
   }
 
-  /* line 1861, main.scss */
+  /* line 1870, main.scss */
   20%,
   60% {
     -webkit-transform: rotate3d(0, 0, 1, 80deg);
@@ -4395,7 +4403,7 @@ body {
     animation-timing-function: ease-in-out;
   }
 
-  /* line 1872, main.scss */
+  /* line 1881, main.scss */
   40%,
   80% {
     -webkit-transform: rotate3d(0, 0, 1, 60deg);
@@ -4409,7 +4417,7 @@ body {
     opacity: 1;
   }
 
-  /* line 1883, main.scss */
+  /* line 1892, main.scss */
   100% {
     -webkit-transform: translate3d(0, 700px, 0);
     -ms-transform: translate3d(0, 700px, 0);
@@ -4418,13 +4426,13 @@ body {
   }
 }
 
-/* line 1890, main.scss */
+/* line 1899, main.scss */
 .hinge {
   -webkit-animation-name: hinge;
   animation-name: hinge;
 }
 
-/* line 1895, main.scss */
+/* line 1904, main.scss */
 .arrowNav {
   position: absolute;
   width: 0px;
@@ -4439,7 +4447,7 @@ body {
   transition: 0.5s;
 }
 
-/* line 1909, main.scss */
+/* line 1918, main.scss */
 .arrowNav:before {
   content: '';
   width: 0px;
@@ -4450,7 +4458,7 @@ body {
   -webkit-transform: translate(-13px, -24px);
 }
 
-/* line 1919, main.scss */
+/* line 1928, main.scss */
 .arrowNav.down {
   transform: rotate(90deg) translate(0px, 13px);
   -webkit-transform: rotate(90deg) translate(0px, 13px);
@@ -4460,78 +4468,78 @@ body {
 }
 
 @-webkit-keyframes blinking {
-  /* line 1927, main.scss */
+  /* line 1936, main.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 1931, main.scss */
+  /* line 1940, main.scss */
   100% {
     opacity: 0.5;
   }
 }
 
 @keyframes blinking {
-  /* line 1936, main.scss */
+  /* line 1945, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1939, main.scss */
+  /* line 1948, main.scss */
   50% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes helpToScroling {
-  /* line 1947, main.scss */
+  /* line 1956, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1950, main.scss */
+  /* line 1959, main.scss */
   10% {
     opacity: 0;
   }
 
-  /* line 1953, main.scss */
+  /* line 1962, main.scss */
   20% {
     opacity: 1;
   }
 
-  /* line 1956, main.scss */
+  /* line 1965, main.scss */
   30% {
     opacity: 0;
   }
 
-  /* line 1959, main.scss */
+  /* line 1968, main.scss */
   100% {
     opacity: 0;
   }
 }
 
 @keyframes helpToScroling {
-  /* line 1964, main.scss */
+  /* line 1973, main.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1967, main.scss */
+  /* line 1976, main.scss */
   10% {
     opacity: 0;
   }
 
-  /* line 1970, main.scss */
+  /* line 1979, main.scss */
   20% {
     opacity: 1;
   }
 
-  /* line 1973, main.scss */
+  /* line 1982, main.scss */
   30% {
     opacity: 0;
   }
 
-  /* line 1976, main.scss */
+  /* line 1985, main.scss */
   100% {
     opacity: 0;
   }

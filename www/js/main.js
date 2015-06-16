@@ -103,8 +103,7 @@ $(document).ready(function(){
             //enable select
             enableSelect: true,
             //enable multi-select
-            multiSelect: false,
-            //set day names
+            multiSelect: false,            //set day names
             dayNames: dayNames,
             //set month names
             monthNames: monthNames,
@@ -117,7 +116,7 @@ $(document).ready(function(){
             //set ajax call
             reqAjax: {
                 type: 'get',
-                url: 'http://fierydream.com/eventsPhp.php'  // http://fierydream.com/events.json  //http://bic.cat/bic_calendar/index.php
+                url: 'http://new.fierydream.com/js/someJSON/events.json'  // http://new.fierydream.com/js/someJSON/events.json    //http://bic.cat/bic_calendar/index.php
             }
         });
     }
@@ -125,29 +124,7 @@ $(document).ready(function(){
     calendar();
 
 
-    function showSecret() {
-        if ($('.popover-content').css('display') == 'none') {
-            $('.popover-content').show();
-            $('.dopLink').remove();
-            $('#calendari_lateral1').append('<span class="dopLink"><a class="calendarLink" target="_blank" href="http://fierydream.com/grafik.html">ГРАФИК РАБОТЫ</a></span>');
-            //document.cookie="apanel=1; expires=Mon, 01-Jan-2021 00:00:00 GMT";
-        } else {
-            $('.popover-content').hide();
-            $('.dopLink').remove();
-            //document.cookie="apanel=0; expires=Mon, 01-Jan-2021 00:00:00 GMT";
-        }
-    }
 
-    var isShift = false;
-
-    $(document).keyup(function (e) {
-        if (e.which == 16) isShift = false;
-    }).keydown(function (e) {
-        if (e.which == 16) {
-            showSecret();
-            return false;
-        }
-    });
     //$('.popover').on( "taphold",  showSecret() );
 
    /* $( "#foo" ).bind( "click", function() {
@@ -255,6 +232,34 @@ $(document).ready(function(){
         $(".anotherSunResult").html($("#anotherDaySun").val() + ' солнце зайдет в <span>' +anotherSunSet.sunset.getHours() + ':' + customMinut+ '</span>');
 
     });
+
+
+
+
+    /*-------------------------------------------------*/
+
+    $.ajax({
+        type: 'get',
+        url: 'http://new.fierydream.com/grafik.html',
+        crossDomain : true,
+        dataType: 'html'
+    }).done(function (data) {
+        $('.downloadGrafik').html(data).empty().html($('.tab1'));
+        //$('.table1').hide;
+        //console.log( $('.tab1'));
+
+
+
+    });
+
+
+
+
+
+
+
+
+
 
 });
 

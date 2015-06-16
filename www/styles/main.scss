@@ -1520,6 +1520,15 @@ body {
         margin-top: 50%;
       }
     }
+
+    .downloadGrafik{
+      height: 90%;
+      width: 90%;
+      overflow: scroll;
+      display: block;
+      position: relative;
+      border: 1px solid red;
+    }
   }
 
 }
