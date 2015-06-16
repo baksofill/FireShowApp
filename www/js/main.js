@@ -56,27 +56,7 @@ $(document).ready(function(){
     });
     /* -------------  Main Vertical Slider for navigation END -------------- */
 
-
-    /* -------------  Hiding ReadMore Text -------------- */
-    $('.buttonReadMore').click(function () {
-        if ($('.media').hasClass('active')) {
-            $('.media').removeClass('active');
-            $('.description').addClass('active');
-        } else {
-            $('.media').addClass('active');
-            $('.description').removeClass('active');
-        }
-
-    });
-
-    /* -------------  Hiding END -------------- */
-
-
-
-
-
     /* -------------  Calendar -------------- */
-
     function calendar() {
         var monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 
@@ -120,7 +100,6 @@ $(document).ready(function(){
             }
         });
     }
-
     calendar();
 
 
@@ -240,13 +219,31 @@ $(document).ready(function(){
 
     $.ajax({
         type: 'get',
-        url: 'http://new.fierydream.com/grafik.html',
+        url: './js/someJSON/events.json',
         crossDomain : true,
-        dataType: 'html'
+        dataType: 'json'
     }).done(function (data) {
-        $('.downloadGrafik').html(data).empty().html($('.tab1'));
+        //$('.downloadGrafik').html(data).empty().html($('.tab1'));
         //$('.table1').hide;
-        //console.log( $('.tab1'));
+        console.log( data.punishment);
+
+
+        for (i in data.training) {
+            //console.log(i + ": " + data.punishment[i]);
+            //$('.tab1 > tbody > tr').append("<th>" + data.punishment[i] + "</th>");
+            console.log(data.punishment[i].length);
+
+        /*<tr>
+            <th>Июнь</th>
+            <th>17</th>
+            <th>19:00</th>
+            <th>Гаваи</th>
+        </tr>*/
+
+
+        }
+
+
 
 
 
