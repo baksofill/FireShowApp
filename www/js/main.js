@@ -232,12 +232,14 @@ $(document).ready(function(){
             var myTh = $('.tab2 > tbody ');
            myTh.append("<tr>  <th>" + data.work[j]['dateAndPlace'] + "</th><th> + </th><th> + </th><th> + </th><th> + </th> </tr>");
 
+            var currentDateAndPlace = data.work[j]['dateAndPlace'];
             switch (data.work[j]['name']) {
                 case "Миня":
-                    //this.$('.tab2 th:nth-child(2)').html(data.work[j]['info']);
+                    $(".tab2  tr:last-child > th:nth-child(2)").html(data.work[j]['info']);
+
                     break;
                 case "Taня":
-                    //$('.tab2 th:nth-child(5)').html(data.work[j]['info']);
+                    $(".tab2  tr:last-child > th:nth-child(5)").html(data.work[j]['info']);
                     break;
                 default:
                     console.log('вАще никого нет');
