@@ -1,8 +1,6 @@
 @import "_lib";
 @import "_pagePiling";
 @import "_preloader";
-@import "_bxslider";
-@import "_jquery.lightbox";
 @import "_tabs";
 @import "_calendar";
 @import "_date";
@@ -865,558 +863,6 @@ body {
 
 }
 
-.programs {
-  background: url("../img/body-bg.jpg");
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-  //  display: none;
-
-  .omGallary,.ukrGallary, .gavGallary {
-    width: 120px;
-    height: 80px;
-    display: inline-block;
-    content: '';
-    background: url("../img/gallery/1-om.png");
-    background-size: 100% auto;
-  }
-  .ukrGallary{
-    background: url("../img/gallery/2-ukr.png");
-  }
-  .gavGallary{
-    background: url("../img/gallery/3-gav.png");
-  }
-  .imgOM, .imgUA {
-    a:nth-child(2)>span{
-      background-position: -0px -86px;
-    }
-    a:nth-child(3)>span{
-      background-position: -0px -86px*2;
-    }
-    a:nth-child(4)>span{
-      background-position: -0px -86px*3;
-    }
-    a:nth-child(5)>span{
-      background-position: -0px -86px*4;
-    }
-    a:nth-child(6)>span{
-      background-position: -0px -86px*5;
-    }
-    a:nth-child(7)>span{
-      background-position: -0px -86px*6;
-    }
-    a:nth-child(8)>span{
-      background-position: -0px -86px*7;
-    }
-
-  }
-  .imgUA {
-    a:nth-child(2)>span{
-      background-position: -0px -86px;
-    }
-    a:nth-child(3)>span{
-      background-position: -0px -170px;
-    }
-    a:nth-child(4)>span{
-      background-position: -0px -255px;
-    }
-    a:nth-child(5) > span {
-      background-position: -0px -339px;
-    }
-    a:nth-child(6) > span {
-      background-position: -0px -423px;
-    }
-    a:nth-child(7) > span {
-      background-position: -0px -508px;
-    }
-    a:nth-child(8) > span {
-      background-position: -0px -595px;
-    }
-  }
-  .imgGAV{
-    a:nth-child(2)>span{
-      background-position: -0px -85px;
-    }
-    a:nth-child(3)>span{
-      background-position: -0px -170px;
-    }
-    a:nth-child(4)>span{
-      background-position: -0px -270px;
-    }
-    a:nth-child(5) > span {
-      background-position: -0px -354px;
-    }
-    a:nth-child(6) > span {
-      background-position: -0px -438px;
-    }
-    a:nth-child(7) > span {
-      background-position: -0px -522px;
-    }
-    a:nth-child(8) > span {
-      background-position: -0px -606px;
-    }
-  }
-
-  .ourPr {
-    display: none;
-  }
-
-  .description, .media {
-    display: none;
-    @include tablet {
-      display: block;
-      text-align: center;
-    }
-  }
-  .description {
-    padding: 20px;
-    @include tablet {
-      margin-top: 10px;
-    }
-    p {
-      text-align: justify;
-      margin-top: 10px;
-      @include desktop {
-        margin-top: 20px;
-      }
-
-      .programTitle {
-        color: red;
-        font-weight: bold;
-        & > span {
-          font-weight: normal;
-          color: #000;
-        }
-        @include desktop {
-          display: block;
-        }
-      }
-      .preTitle {
-        font-weight: bold;
-        & > span {
-          font-weight: normal;
-        }
-
-        @include desktop {
-          display: block;
-        }
-      }
-      .price {
-        display: block;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: red;
-        color: #fff;
-        margin-left: 80%;
-        text-align: center;
-
-      }
-      &.textOM, &.textUK, &.textGAV {
-        margin-right: 20%;
-        position: relative;
-        height: 20px;
-        .price {
-          padding: 5px;
-          position: absolute;
-          right: -25%;
-          top: 0;
-          margin: 0;
-          width: 35%;
-          @include tablet {
-            padding: 10px;
-            width: 20%;
-
-          }
-
-        }
-        @include tablet {
-          height: auto;
-          display: block;
-        }
-
-      }
-      .notForMobyle {
-        display: none;
-        @include tablet {
-          display: inline;
-        }
-      }
-    }
-  }
-  .description.active, .media.active {
-    display: block;
-  }
-  .buttonReadMore {
-    width: 200px;
-    margin: 5px auto;
-    @include tablet {
-      display: none;
-    }
-  }
-  .videoOM, .videoUA, .videoGAV {
-    content: '';
-    display: block;
-    margin: 10px auto;
-    width: 264px;
-    height: 146px;
-    //    border: 1px solid red;
-    border-radius: 5px;
-    background: url("../img/gallery/videos.jpg");
-    background-size: 100% auto;
-    @include mobile-landscape {
-      display: inline-block;
-      width: 240px;
-      height: 130px;
-      margin: 20px auto;
-    }
-    @include tablet {
-      display: inline-block;
-      width: 240px;
-      height: 130px;
-      margin: 20px auto;
-      //      vertical-align: top;
-      margin-top: 0;
-    }
-    @include desktop-short{
-      width: 300px;
-      height: 164px;
-      margin: 0;
-    }
-
-    a {
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: block;
-    }
-  }
-  .videoUA {
-    background-position: bottom;
-  }
-  .videoGAV {
-    background-position: center;
-  }
-  .imgOM, .imgGAV, .imgUA {
-    display: block;
-    width: 250px;
-    margin: 0 auto;
-    .notForMobyle {
-      display: none;
-      @include tablet {
-        display: inline-block;
-      }
-    }
-    .forDesktop{
-      display: none;
-      @include desktop-short{
-        display: inline-block;
-      }
-    }
-    @include mobile-landscape {
-      display: inline-block;
-      transform: scale(0.9);
-      -webkit-transform: scale(0.9);
-      margin-left: -10px;
-    }
-    @include tablet {
-      display: inline-block;
-      width: 370px;
-    }
-    @include desktop-short{
-      width: 500px;
-    }
-  }
-  .titlePr {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    ul {
-      text-align: center;
-      display: flex;
-      display: -webkit-flex;
-      li {
-        margin: 10px;
-        flex: 1;
-        -webkit-flex: 1;
-        a {
-          color: #000;
-        }
-        span {
-          display: none;
-          @include tablet {
-            display: inline;
-
-          }
-        }
-
-      }
-
-    }
-    @include tablet {
-      margin-top: 50px;
-    }
-    @include desktop-short{
-      margin-top: 5px;
-    }
-    @include desktop {
-      margin-top: 50px;
-    }
-  }
-
-  .bxslider {
-    & > li {
-      @include mobile-landscape {
-        padding: 10px;
-      }
-      @include tablet {
-
-      }
-    }
-    & > li:nth-child(1) {
-      padding: 20px;
-    }
-  }
-}
-
-.artistes {
-  background-image: linear-gradient(-90deg, #FFA200, #F600FF);
-  width: 100%;
-  height: 100%;
-  text-align: center;
-
-  .artistCard {
-    top: 10px;
-    position: relative;
-    width: 100%;
-    height: 100px;
-    display: inline-block;
-    @include mobile-landscape{
-      width: 45%;
-    }
-    @include tablet {
-      top: 0%;
-      position: relative;
-      width: 200px;
-      height: 370px;
-      display: inline-block;
-      -webkit-perspective: 600px;
-      -moz-perspective: 600px;
-      perspective: 600px;
-    }
-    @include tablet-landscape {
-      top: 10%;
-    }
-    @include desktop{
-      top: 10%;
-      position: relative;
-      width: 250px;
-      height: 460px;
-      display: inline-block;
-      -webkit-perspective: 600px;
-      -moz-perspective: 600px;
-      perspective: 600px;
-      transform: scale(1);
-      margin-right: 0px;
-
-    }
-    .artistBtn {
-      position: relative;
-      width: auto;
-      height: 80px;
-      line-height: 5;
-      text-align: right;
-      padding-right: 30px;
-      color: #fff;
-      @include mobile-landscape{
-        text-align: right;
-      }
-      @include tablet {
-        position: absolute;
-        width: 200px;
-        color: #fff;
-        bottom: -50px;
-        cursor: pointer;
-        margin: 10px auto;
-        line-height: 1;
-        height: auto;
-        text-align: center;
-        padding-left: 0;
-        @include desktop {
-          position: absolute;
-          width: 250px;
-          color: #fff;
-          bottom: -50px;
-          cursor: pointer;
-          margin: 10px auto;
-          line-height: 1;
-          height: auto;
-          text-align: center;
-          padding-left: 0;
-        }
-      }
-      @include desktop{
-        position: absolute;
-        width: 250px;
-        color: #fff;
-        bottom: -50px;
-        cursor: pointer;
-        margin: 10px auto;
-        line-height: 1;
-        height: auto;
-        text-align: center;
-        padding-left: 0;
-
-      }
-      &:before{
-        content: '';
-        width: 80px;
-        height: 80px;
-        display: block;
-        position: absolute;
-        left: 80px;
-        background: url("../img/artistsAva.png") no-repeat;
-        background-size: 100% auto;
-        border-radius: 50%;
-        @include mobile-landscape{
-          left: 20px;
-        }
-        @include tablet {
-          display: none;
-        }
-        @include desktop{
-          display: none;
-        }
-      }
-    }
-  }
-  .card {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 5px;
-    -webkit-transition: -webkit-transform 0.5s;
-    -moz-transition: -moz-transform 0.5s;
-    transition: transform 0.5s;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    display: none;
-    @include tablet {
-      display: block;
-    }
-    @include desktop{
-      display: block;
-    }
-    figure {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      display: block;
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      backface-visibility: hidden;
-      margin: 0;
-      border-radius: 5px;
-    }
-    .back {
-      background: url("../img/artists.png") no-repeat;
-      background-size: 100% auto;
-    }
-    .front {
-      background-color: #fff;
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -ms-transform: rotateY(180deg);
-      -o-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-      .artistsText {
-        position: absolute;
-        margin: 10px;
-        line-height: 1.5;
-        text-align: justify;
-        @include tablet {
-          height: 350px;
-          overflow: hidden;
-        }
-        @include desktop {
-          overflow: visible;
-        }
-
-        .bold {
-          font-weight: bold;
-          color: red;
-        }
-      }
-
-    }
-  }
-  .card.flip, .card:hover {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }
-
-  .me {
-    .back {
-      @include tablet {
-        background-position: 0px -390px;
-      }
-      @include desktop {
-        background-position: 0px -488px;
-      }
-    }
-    .artistBtn:before{
-      background-position-y: -88px;
-    }
-  }
-  .pasha {
-    .back {
-      @include tablet {
-        background-position: 0px -1170px;
-      }
-      @include desktop {
-        background-position: 0px -1465px;
-      }
-
-    }
-    .artistBtn:before{
-      background-position-y: -265px;
-    }
-  }
-  .serg {
-    .back {
-      @include tablet {
-        background-position: 0px -780px;
-      }
-      @include desktop {
-        background-position: 0px -977px;
-      }
-    }
-    .artistBtn:before{
-      background-position-y: -352px;
-    }
-  }
-  .alina {
-    @include mobile-landscape{
-      margin-top: -20px;
-    }
-    .back {
-      background-position: 0px bottom;
-    }
-    .artistBtn:before{
-      background-position-y: -176px;
-    }
-  }
-
-}
-
 .mainCalendar {
   width: 100%;
   height: 100%;
@@ -1435,9 +881,11 @@ body {
     top: 10%;
     @include mobile-landscape{
       top: 2%;
+      display: none;
     }
     @include tablet {
       font-size: 130%;
+      display: block;
     }
   }
 
@@ -1448,12 +896,19 @@ body {
     top: 30%;
     position: relative;
 
+
     @include landscape {
       width: 400px;
       top: 10%;
     }
     @include mobile-landscape{
-      top: 5%;
+      top: 3%;
+      .header{
+        padding: 0;
+      }
+      .popover-title{
+        display: none;
+      }
     }
     @include tablet {
       width: 600px;
@@ -1468,7 +923,6 @@ body {
 
     .table {
       width: 100%;
-
       tr {
         @include tablet {
           height: 50px;
@@ -1510,6 +964,7 @@ body {
     position: relative;
     top: 10px;
     height: 100%;
+    width: 95%;
     .dopLink{
       display: block;
       text-align: center;
@@ -1521,17 +976,54 @@ body {
       }
     }
 
-    .downloadGrafik{
-      height: 90%;
-      width: 90%;
-      overflow: scroll;
-      display: block;
-      position: relative;
+    table{
+      width: 95%;
+      margin: 0 auto;
+    }
+    .tab1, .tab2, .tab3{
+      border: 1px solid gold;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    .non1{
+      background: violet;
+    }
+    .non2{
+      background: orange ;
+    }
+    .shtraf{
+      background: red;
+    }
+    th{
+      height: 40px;
+      width: 20%;
+      border: 1px solid gold;
+      padding: 5px;
+      text-align: center;
+    }
+    .tab3 th{
       border: 1px solid red;
     }
+    .minya{
+      background: lightblue;
+    }
+    .pasha{
+      background: greenyellow;
+    }
+    .alina{
+      background: pink;
+    }
+    .tanya{
+      background: yellow;
+    }
+    .complet{
+      background: #cccccc;
+    }
+
   }
 
 }
+
 
 #orderCallModal, #orderFireModal, #sunSatCalc {
   z-index: 50;

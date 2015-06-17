@@ -219,37 +219,40 @@ $(document).ready(function(){
 
     $.ajax({
         type: 'get',
-        url: './js/someJSON/events.json',
+        url: 'http://new.fierydream.com/js/someJSON/grafik.json',
         crossDomain : true,
         dataType: 'json'
     }).done(function (data) {
-        //$('.downloadGrafik').html(data).empty().html($('.tab1'));
-        //$('.table1').hide;
-        console.log( data.punishment);
+        var i,j;
+        for (i = 0; i < data.training.length; i++) {
+            $('.tab1 > tbody ').append("<tr class='" + data.training[i]['status'] + "'><th>" + data.training[i]['month'] + "</th><th>" + data.training[i]['date'] + "</th><th>" + data.training[i]['time'] + "</th><th>" + data.training[i]['info'] + "</th> </tr>");
+        }
 
+        for (j = 0; j < data.work.length; j++) {
+            var myTh = $('.tab2 > tbody ');
+           myTh.append("<tr>  <th>" + data.work[j]['dateAndPlace'] + "</th><th> + </th><th> + </th><th> + </th><th> + </th> </tr>");
 
-        for (i in data.training) {
-            //console.log(i + ": " + data.punishment[i]);
-            //$('.tab1 > tbody > tr').append("<th>" + data.punishment[i] + "</th>");
-            console.log(data.punishment[i].length);
+            switch (data.work[j]['name']) {
+                case "Миня":
+                    //this.$('.tab2 th:nth-child(2)').html(data.work[j]['info']);
+                    break;
+                case "Taня":
+                    //$('.tab2 th:nth-child(5)').html(data.work[j]['info']);
+                    break;
+                default:
+                    console.log('вАще никого нет');
+                    break;
+            }
 
-        /*<tr>
-            <th>Июнь</th>
-            <th>17</th>
-            <th>19:00</th>
-            <th>Гаваи</th>
-        </tr>*/
-
-
+        }
+        for (k = 0; k < data.punishment.length; k++) {
+            $('.tab3 > tbody ').append("<tr class='" + data.punishment[k]['status'] + "'><th>" + data.punishment[k]['name'] + "</th><th>" + data.punishment[k]['date'] + "</th><th>" + data.punishment[k]['reason'] + "</th><th>" + data.punishment[k]['closed'] + "</th> </tr>");
         }
 
 
 
 
-
     });
-
-
 
 
 

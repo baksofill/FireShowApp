@@ -12,14 +12,14 @@ ul.tabs {
 }
 
 .t1, .t2, .t3, .t4 {
-  display: none;
+  //display: none;
   background: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   -khtml-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   z-index: -1;
-  width: 40%;
+  width: 29%;
   text-align: center;
   @include tablet {
     display: block;
@@ -30,8 +30,15 @@ ul.tabs {
   }
 }
 
-.t1, .t2 {
+.t2 {
   display: block;
+  line-height: 1;
+  @include mobile-landscape{
+    line-height: 1.3;
+  }
+  @include tablet{
+    line-height: 1.3;
+  }
 
 }
 
@@ -55,14 +62,15 @@ ul.tabs {
 
 ul.tabs li {
   float: left;
-  padding: 5px;
-  margin-right: 10px;
+  padding: 3px;
+  margin-right: 5px;
   border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0 !important;
   -webkit-border-radius: 5px 5px 0 0;
   -khtml-border-radius: 5px 5px 0 0;
   height: 25px;
   border: 1px solid #ccc;
+
 
   background: -moz-linear-gradient(90deg, rgba(229, 229, 229, 1) 7%, rgba(255, 255, 255, 1) 39%);
   background: -webkit-linear-gradient(90deg, rgba(229, 229, 229, 1) 7%, rgba(255, 255, 255, 1) 39%);

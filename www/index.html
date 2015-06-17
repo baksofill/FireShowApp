@@ -276,6 +276,7 @@
 
                 <div id="menu" class="topMenu">
                     <ul>
+                        <li ><a data-remote="sunSatCalc.html" data-target="#sunSatCalc" data-toggle="modal" role="button" href="#calendar" >ЗАХОД СОЛНЦА </a></li>
                         <li data-menuanchor="page2"><a href="#calendar" >КАЛЕНДАРЬ  <span>ЗАНЯТОСТИ</span></a></li>
                         <li data-menuanchor="page2"><a href="#grafik" >ГРАФИК</a></li>
                     </ul>
@@ -333,7 +334,13 @@
     <div class="section" id="section3">
         <div class="feedback">
             <div>
-                <div class="downloadGrafik">
+                <ul class="tabs tabs1">
+                    <li class="t1 tab-current">Тренировки</li>
+                    <li class="t2">Работа в Грандах</li>
+                    <li class="t3">Штрафы</li>
+                    <!-- <li class="t4">Отзывы Google+</li>-->
+                </ul>
+                <div class="t1">
                     <table class="tab1">
                         <tr>
                             <th>Месяц</th>
@@ -341,14 +348,33 @@
                             <th>Время</th>
                             <th>Доп. информация</th>
                         </tr>
+                    </table>
+                </div>
+
+                <div class="t2">
+                    <table class="tab2">
                         <tr>
-                            <th>Июнь</th>
-                            <th>17</th>
-                            <th>19:00</th>
-                            <th>Гаваи</th>
+                            <th>Дата и место заказа</th>
+                            <th class="minya">Миня</th>
+                            <th class="pasha">Паша</th>
+                            <th class="alina">Алина</th>
+                            <th class="tanya">Таня</th>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="t3">
+                    <table class="tab3">
+                        <tr>
+                            <th>Имя</th>
+                            <th>Получен</th>
+                            <th>Причина</th>
+                            <th>Закрыт</th>
                         </tr>
                     </table>
                 </div>
+
+
                 <!--<div class="dopLink"><a class="calendarLink"  href="http://fierydream.com/grafik.html">ГРАФИК РАБОТЫ</a></div>-->
             </div>
 
