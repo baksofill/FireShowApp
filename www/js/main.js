@@ -217,6 +217,15 @@ $(document).ready(function(){
 
 
     /*-------------------------------------------------*/
+    var currentDate = new Date();
+    var optionsDate = {
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long',
+        hour: 'numeric',
+        minute: 'numeric'
+    };
+
     function getDataForGrafik() {
         var grafikDate = null;
         $.ajax({
@@ -225,13 +234,11 @@ $(document).ready(function(){
             crossDomain : true,
             dataType: 'json'
         }).done(function (data) {
-            grafikDate = data
             var i,j;
             for (i = 0; i < data.training.length; i++) {
                 $('.tab1 > tbody ').append("<tr class='" + data.training[i]['status'] + "'><th>" + data.training[i]['month'] + "</th><th>" + data.training[i]['date'] + "</th><th>" + data.training[i]['time'] + "</th><th>" + data.training[i]['info'] + "</th> </tr>");
                 $(".tab1  tr:last-child").addClass('oldData');
             }
-
             for (j = 0; j < data.work.length; j++) {
                 var myTh = $('.tab2 > tbody ');
                 myTh.append("<tr>  <th>" + data.work[j]['dateAndPlace'] + "</th><th> + </th><th> + </th><th> + </th><th> + </th> </tr>");
@@ -276,28 +283,19 @@ $(document).ready(function(){
                 }
                 $(".tab3  tr:last-child").addClass('oldData');
             }
+            $('.dateOfUpdate').html(currentDate.toLocaleString("ru", optionsDate));
 
-        });
+        }).fail(
+            function(){
+                $('.dateOfUpdate').html("Сбой обновления :(");
+            }
+        );
     };
-    //getDataForGrafik();
+
+
     $('.updateButtonGrafik').click(function () {
         $(".oldData").remove()
-
         getDataForGrafik();
-
-        var currentDate = new Date();
-
-        var options = {
-            month: 'long',
-            day: 'numeric',
-            weekday: 'long',
-            hour: 'numeric',
-            minute: 'numeric'
-        };
-        $('.dateOfUpdate').html(currentDate.toLocaleString("ru", options));
-
-
-
     });
 
 
