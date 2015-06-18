@@ -229,13 +229,13 @@ $(document).ready(function(){
             var i,j;
             for (i = 0; i < data.training.length; i++) {
                 $('.tab1 > tbody ').append("<tr class='" + data.training[i]['status'] + "'><th>" + data.training[i]['month'] + "</th><th>" + data.training[i]['date'] + "</th><th>" + data.training[i]['time'] + "</th><th>" + data.training[i]['info'] + "</th> </tr>");
+                $(".tab1  tr:last-child").addClass('oldData');
             }
 
             for (j = 0; j < data.work.length; j++) {
                 var myTh = $('.tab2 > tbody ');
                 myTh.append("<tr>  <th>" + data.work[j]['dateAndPlace'] + "</th><th> + </th><th> + </th><th> + </th><th> + </th> </tr>");
 
-                var currentDateAndPlace = data.work[j]['dateAndPlace'];
                 switch (data.work[j]['name']) {
                     case "Миня":
                         $(".tab2  tr:last-child > th:nth-child(2)").html(data.work[j]['info']).addClass(data.work[j]['class']);
@@ -252,6 +252,7 @@ $(document).ready(function(){
                     default:
                         break;
                 }
+                $(".tab2  tr:last-child").addClass('oldData');
             }
             for (k = 0; k < data.punishment.length; k++) {
                 $('.tab3 > tbody ').append("<tr class='" + data.punishment[k]['status'] + "'><th>" + data.punishment[k]['name'] + "</th><th>" + data.punishment[k]['date'] + "</th><th>" + data.punishment[k]['reason'] + "</th><th>" + data.punishment[k]['closed'] + "</th> </tr>");
@@ -273,12 +274,15 @@ $(document).ready(function(){
 
                         break;
                 }
+                $(".tab3  tr:last-child").addClass('oldData');
             }
 
         });
     };
     //getDataForGrafik();
     $('.updateButtonGrafik').click(function () {
+        $(".oldData").remove()
+
         getDataForGrafik();
 
         var currentDate = new Date();

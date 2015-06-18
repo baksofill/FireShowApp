@@ -861,6 +861,7 @@ body {
 
   }
 
+
 }
 
 .mainCalendar {
@@ -889,6 +890,28 @@ body {
     }
   }
 
+  .updateButtonGrafik{
+    position: absolute;
+    display: block;
+    width: 40%;
+    height: 20px;
+    bottom: 16px;
+    text-align: center;
+    left: 10px;
+    padding: 2px 20px;
+    background-color: white;
+  }
+  .dateOfUpdate{
+    position: absolute;
+    display: block;
+    width: 55%;
+    height: 20px;
+    bottom: 16px;
+    text-align: right;
+    right: -17px;
+    padding: 2px 20px;
+    color: #fff;
+  }
 
   #calendari_lateral1 {
     width: 230px;
@@ -1044,6 +1067,9 @@ body {
   }
 
 }
+
+
+
 
 
 #orderCallModal, #orderFireModal, #sunSatCalc {
