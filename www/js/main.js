@@ -33,6 +33,7 @@ $(document).ready(function(){
         menu: '#menu',
         anchors: ['main', 'calendar', 'grafik'],
         sectionsColor: ['#000', 'green', '#ee005a', '#39C', 'blue'],
+        normalScrollElements:'.scrolable',
         navigation: {
             'position': 'left',
             'tooltips': ['Винницкий Театр Огня','Календарь', 'График Работы']
@@ -216,51 +217,84 @@ $(document).ready(function(){
 
 
     /*-------------------------------------------------*/
-
-    $.ajax({
-        type: 'get',
-        url: 'http://new.fierydream.com/js/someJSON/grafik.json',
-        crossDomain : true,
-        dataType: 'json'
-    }).done(function (data) {
-        var i,j;
-        for (i = 0; i < data.training.length; i++) {
-            $('.tab1 > tbody ').append("<tr class='" + data.training[i]['status'] + "'><th>" + data.training[i]['month'] + "</th><th>" + data.training[i]['date'] + "</th><th>" + data.training[i]['time'] + "</th><th>" + data.training[i]['info'] + "</th> </tr>");
-        }
-
-        for (j = 0; j < data.work.length; j++) {
-            var myTh = $('.tab2 > tbody ');
-           myTh.append("<tr>  <th>" + data.work[j]['dateAndPlace'] + "</th><th> + </th><th> + </th><th> + </th><th> + </th> </tr>");
-
-            var currentDateAndPlace = data.work[j]['dateAndPlace'];
-            switch (data.work[j]['name']) {
-                case "Миня":
-                    $(".tab2  tr:last-child > th:nth-child(2)").html(data.work[j]['info']);
-
-                    break;
-                case "Taня":
-                    $(".tab2  tr:last-child > th:nth-child(5)").html(data.work[j]['info']);
-                    break;
-                default:
-                    console.log('вАще никого нет');
-                    break;
+    function getDataForGrafik() {
+        var grafikDate = null;
+        $.ajax({
+            type: 'get',
+            url: 'http://new.fierydream.com/js/someJSON/grafik.json',
+            crossDomain : true,
+            dataType: 'json'
+        }).done(function (data) {
+            grafikDate = data
+            var i,j;
+            for (i = 0; i < data.training.length; i++) {
+                $('.tab1 > tbody ').append("<tr class='" + data.training[i]['status'] + "'><th>" + data.training[i]['month'] + "</th><th>" + data.training[i]['date'] + "</th><th>" + data.training[i]['time'] + "</th><th>" + data.training[i]['info'] + "</th> </tr>");
             }
 
-        }
-        for (k = 0; k < data.punishment.length; k++) {
-            $('.tab3 > tbody ').append("<tr class='" + data.punishment[k]['status'] + "'><th>" + data.punishment[k]['name'] + "</th><th>" + data.punishment[k]['date'] + "</th><th>" + data.punishment[k]['reason'] + "</th><th>" + data.punishment[k]['closed'] + "</th> </tr>");
-        }
+            for (j = 0; j < data.work.length; j++) {
+                var myTh = $('.tab2 > tbody ');
+                myTh.append("<tr>  <th>" + data.work[j]['dateAndPlace'] + "</th><th> + </th><th> + </th><th> + </th><th> + </th> </tr>");
 
+                var currentDateAndPlace = data.work[j]['dateAndPlace'];
+                switch (data.work[j]['name']) {
+                    case "Миня":
+                        $(".tab2  tr:last-child > th:nth-child(2)").html(data.work[j]['info']).addClass(data.work[j]['class']);
+                        break;
+                    case "Паша":
+                        $(".tab2  tr:last-child > th:nth-child(3)").html(data.work[j]['info']).addClass(data.work[j]['class']);
+                        break;
+                    case "Алина":
+                        $(".tab2  tr:last-child > th:nth-child(4)").html(data.work[j]['info']).addClass(data.work[j]['class']);
+                        break;
+                    case "Taня":
+                        $(".tab2  tr:last-child > th:nth-child(5)").html(data.work[j]['info']).addClass(data.work[j]['class']);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            for (k = 0; k < data.punishment.length; k++) {
+                $('.tab3 > tbody ').append("<tr class='" + data.punishment[k]['status'] + "'><th>" + data.punishment[k]['name'] + "</th><th>" + data.punishment[k]['date'] + "</th><th>" + data.punishment[k]['reason'] + "</th><th>" + data.punishment[k]['closed'] + "</th> </tr>");
+
+                switch (data.punishment[k]['name']) {
+                    case "Миня":
+                        $(".tab3  tr:last-child").addClass('minya');
+                        break;
+                    case "Паша":
+                        $(".tab3  tr:last-child").addClass('pasha');
+                        break;
+                    case "Миня":
+                        $(".tab3  tr:last-child").addClass('alina');
+                        break;
+                    case "Taня":
+                        $(".tab3  tr:last-child").addClass('tanya');
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+
+        });
+    };
+    //getDataForGrafik();
+    $('.updateButtonGrafik').click(function () {
+        getDataForGrafik();
+
+        var currentDate = new Date();
+
+        var options = {
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long',
+            hour: 'numeric',
+            minute: 'numeric'
+        };
+        $('.dateOfUpdate').html(currentDate.toLocaleString("ru", options));
 
 
 
     });
-
-
-
-
-
-
 
 
 });

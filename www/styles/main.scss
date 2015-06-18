@@ -965,15 +965,12 @@ body {
     top: 10px;
     height: 100%;
     width: 95%;
-    .dopLink{
-      display: block;
-      text-align: center;
-      top: 50%;
-      position: relative;
-      &>a{
-        color: white;
-        margin-top: 50%;
-      }
+
+    .scrolable{
+      overflow-X: hidden;
+      bottom: 50px;
+      top: 32px;
+      position: absolute;
     }
 
     table{
@@ -1018,6 +1015,30 @@ body {
     }
     .complet{
       background: #cccccc;
+    }
+
+    .updateButtonGrafik{
+      position: absolute;
+      display: block;
+      width: 40%;
+      height: 20px;
+      bottom: 16px;
+      text-align: center;
+      left: 0px;
+      padding: 2px 20px;
+      background-color: white;
+    }
+    .dateOfUpdate{
+      position: absolute;
+      display: block;
+      width: 55%;
+      height: 20px;
+      bottom: 16px;
+      text-align: right;
+      right: -17px;
+      padding: 2px 20px;
+      color: #fff;
+
     }
 
   }
