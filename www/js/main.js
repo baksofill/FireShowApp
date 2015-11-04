@@ -97,7 +97,7 @@ $(document).ready(function(){
             //set ajax call
             reqAjax: {
                 type: 'get',
-                url: 'http://new.fierydream.com/js/someJSON/events.json'  // http://new.fierydream.com/js/someJSON/events.json    //http://bic.cat/bic_calendar/index.php
+                url: 'http://fierydream.com/js/someJSON/events.json'
             }
         });
     }
@@ -230,7 +230,7 @@ $(document).ready(function(){
         var grafikDate = null;
         $.ajax({
             type: 'get',
-            url: 'http://new.fierydream.com/js/someJSON/grafik.json',
+            url: 'http://fierydream.com/js/someJSON/grafik.json',
             crossDomain : true,
             dataType: 'json'
         }).done(function (data) {
